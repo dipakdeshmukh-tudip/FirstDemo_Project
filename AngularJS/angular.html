@@ -1,0 +1,19 @@
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="angular.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+	First Name: <input type="text" ng-model="firstName"><br>
+	Last Name: <input type="text" ng-model="lastName"><br>
+	Car Name: <input type="text" ng-model="carname">
+	<br>
+	Full Name: {{firstName + " " + lastName}} <br>
+	My car is : {{carname}}
+	
+	
+</div>
+
+
+</body>
+</html>
