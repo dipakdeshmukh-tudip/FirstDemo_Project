@@ -1,0 +1,49 @@
+			@heighthead:100;
+			@widthhead:100;
+			#Header
+			{
+				height:percentage(@widthhead);
+				width: percentage(@heighthead);
+				text-align:center;
+			}
+			
+			#menu
+			{
+				height:4%; width:100%;
+				
+			}
+			
+			#LeftContent
+			{
+				height:78%; width:80%;float:left;
+			}
+			#RightContent
+			{
+				height:78%; width:19%;float:right;
+			}
+			#LC1
+			{
+				width:50%;float:right;
+			}
+			#LC2
+			{
+				width:20%;float:left;
+			}
+			li{
+				Display:inline;
+			}
+			#menuList
+			{
+				text-align:center;
+			}
+			body
+			{
+				background-repeat:no-repeat;background-image:url("E:\Traning Demo- Dipak/hm.jpg");
+			}
+			#TbLg
+			{
+				align:center;
+			}
+			
+			
+			

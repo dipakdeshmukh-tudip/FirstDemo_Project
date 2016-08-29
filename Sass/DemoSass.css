@@ -1,0 +1,43 @@
+.fright, #RightContent, #LC1 {
+  float: right; }
+
+.fleft, #LeftContent, #LC2 {
+  float: left; }
+
+#Header {
+  height: 10%;
+  width: 100%;
+  text-align: center; }
+
+#menu {
+  height: 4%;
+  width: 100%; }
+
+#LeftContent {
+  height: 78%;
+  width: 80%; }
+
+#RightContent {
+  height: 78%;
+  width: 19%; }
+
+#LC1 {
+  width: 50%; }
+
+#LC2 {
+  width: 20%; }
+
+li {
+  Display: inline; }
+
+#menuList {
+  text-align: center; }
+
+body {
+  background-repeat: no-repeat;
+  background-image: url("E:Traning Demo- Dipak/hm.jpg"); }
+
+#TbLg {
+  align: center; }
+
+/*# sourceMappingURL=DemoSass.css.map */

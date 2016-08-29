@@ -1,0 +1,341 @@
+reg.aspx
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="registration.aspx.cs" Inherits="registration" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
+   <script type="text/javascript">
+      
+           /*Name validation*/
+       function nameValid() {
+           var nm = document.getElementById("<%=TextBox1.ClientID%>").value;
+           if (nm == "" || nm == null) {
+               alert("name must be enter");
+               return false;
+           }
+           var letters = /^[A-Za-z]+$/;
+           if (nm.match(letters)) {
+               // return true;
+           }
+           else {
+               alert("Name contain only character");
+               return false;
+           }
+
+       }
+
+           /*Address validation */
+    function addValid()
+    {
+           var add = document.getElementById("<%=TextBox2.ClientID%>").value;
+           if (add == "" || add == null) {
+               alert("Address must be enter");
+               return false;
+           }
+    }
+           /*Email validation */
+    function emailValid()
+    {
+           var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+           var email = document.getElementById("<%=TextBox3.ClientID%>").value;
+           if (email == "" || email == null) {
+               alert("Enter email id");
+               return false;
+           }
+           if (email.match(expr)) {
+               //return true;
+           }
+           else {
+               alert("You have enter invalid email address");
+               return false;
+           }
+
+       }
+            /*password Validation*/
+    function pwdValid()
+    {
+            var pass1 = document.getElementById("<%=TextBox5.ClientID %>").value;
+
+            if (pass1 == "" || pass1== null) {
+                alert("please enter the password");
+                return false;
+            }
+
+            if (pass1.length <= 8) {
+                alert("please enter the password more than 8 digit ");
+                return false;
+            }
+
+            if (pass1.length >= 15) {
+                alert("please enter the password not more than 15 digit ");
+                return false;
+            }
+
+    }
+    function confpwdValid()
+    {
+        var pass2 = document.getElementById("<%=TextBox6.ClientID%>").value;
+        var pass1 = document.getElementById("TextBox5").value;
+            if (pass2 == "") {
+                alert(" please confirm password ");
+                return false;
+            }
+            
+            if (pass1 != pass2) {
+                alert("password not match");
+                return false;
+            }
+        /*    else {
+                alert("password match");
+                return true;
+            }
+        */
+       
+       }
+    
+        function cnoValid() 
+        {
+            /* contact number validation */
+            var cno = document.getElementById("<%=TextBox4.ClientID%>").value;
+            if (cno == "" || cno == null) {
+                alert("please enter contact number");
+                return false;
+            }
+            else if (!(cno.length == 5)) {
+                alert("mobile number must be 10 digit number");
+                return false;
+            }
+            else if (isNaN(cno)) {
+                alert("contact number contain illagal character");
+                return false;
+            }
+
+        }
+        function myValidation() {
+            nameValid();
+            addValid();
+            emailValid();
+            pwdValid();
+            confpwdValid();
+            cnoValid();
+            return false;
+        }
+        function isValid() {
+            var v = myValidation();
+            if (v== true) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+           
+    </script>
+   
+        
+    <style type="text/css">
+        .style1
+        {
+            height: 26px;
+        }
+    </style>
+   
+        
+</head>
+<body id="bd">
+    <form id="form1"   runat="server"  method="post">
+    <div>
+      
+        <table id="t1">
+            <tr> <td colspan="2" ><center><b>Registration Form<br />
+                <br />
+                </b></center></td></tr>
+            <tr>
+                <td class="style2">
+                    Name:
+                </td>
+                <td class="style1">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="185px" onfocusout="return nameValid()"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3">
+                    Address:
+                </td>
+                <td class="style4">
+                    <asp:TextBox ID="TextBox2" runat="server"  TextMode="MultiLine" Width="185px" 
+                        onfocusout="return addValid()" ></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    Email:
+                </td>
+                <td class="style1">
+                    <asp:TextBox ID="TextBox3" runat="server"  Width="185px" onfocusout="return emailValid()"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    Password:
+                </td>
+                <td class="style1">
+                    <asp:TextBox ID="TextBox5" runat="server"  Width="185px" TextMode="Password" onfocusout="return pwdValid()"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    Confirm Password:
+                </td>
+                <td class="style1">
+                    <asp:TextBox ID="TextBox6" runat="server"  Width="185px" TextMode="Password" onfocusout="return confpwdValid()"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    Phone No.:
+                </td>
+                <td class="style1">
+                    <asp:TextBox ID="TextBox4" runat="server" Width="185px"  onfocusout="return cnoValid()"></asp:TextBox>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">
+                    <center>
+                        &nbsp;&nbsp;   
+                        &nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;<asp:Button ID="submitbtn" runat="server" onclick="submitbtn_Click" 
+                            Text="submit " onclientclick="return isValid()" BorderColor="Maroon" 
+                             />
+&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="clearbtn" runat="server" onclick="clearbtn_Click" 
+                            Text="clear" BorderColor="Maroon" Width="58px" />&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="disp" runat="server" Text="Display" onclick="disp_Click" 
+                            BorderColor="Maroon"></asp:Button>
+                        </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+             <tr>
+                <td>
+                    
+                    <br />
+                 </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>
+
+
+reg.aspz.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+
+public partial class registration : System.Web.UI.Page
+{
+
+    private string constr = WebConfigurationManager.ConnectionStrings["RGDEMOConnectionString1"].ConnectionString.ToString();
+    SqlConnection conn = null;
+    SqlCommand cmd = null;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    protected void submitbtn_Click(object sender, EventArgs e)
+    {
+        
+        conn = new SqlConnection(constr);
+        cmd = new SqlCommand("insert into regtable(Name,Address,EmailId,Phoneno,password)values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "')", conn); 
+        cmd.Parameters.AddWithValue("@Name", TextBox1.Text);
+        cmd.Parameters.AddWithValue("@Address", TextBox2.Text);
+        cmd.Parameters.AddWithValue("@EmailId", TextBox3.Text);
+        cmd.Parameters.AddWithValue("@Phoneno", TextBox4.Text);
+        cmd.Parameters.AddWithValue("@password", TextBox5.Text);
+
+        if (TextBox1.Text == "" || TextBox2.Text == "" || TextBox3.Text == "" || TextBox4.Text == "" || TextBox5.Text == "")
+        {
+            Response.Write("Please filled all the entries");
+        }
+
+        else
+        {
+            try
+            {
+                conn.Open();
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "myValid", "myValid();", true);
+
+                cmd.ExecuteNonQuery();
+                Response.Write("<script language=javascript> alert('record save successfully')</script>");
+            }
+
+            catch (Exception er)
+            {
+                Response.Write("<script language=javascript> alert('error in connection')</script>" + er);
+            }
+            finally
+            {
+                TextBox1.Text = "";
+                TextBox2.Text = "";
+                TextBox3.Text = "";
+                TextBox4.Text = "";
+                TextBox5.Text = "";
+                TextBox6.Text = "";
+                conn.Close();
+            }
+        }
+    }
+    protected void clearbtn_Click(object sender, EventArgs e)
+    {
+        TextBox1.Text = "";
+        TextBox2.Text = "";
+        TextBox3.Text = "";
+        TextBox4.Text = "";
+        TextBox5.Text = "";
+        TextBox6.Text = "";
+
+    }
+    protected void disp_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("MyView.aspx");
+    }
+}
+web.config
+
+<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+
+<configuration>
+  <connectionStrings>
+    <add name="RGDEMO" connectionString="Data Source=DTINAURPW00049\MSSQL2008;Initial Catalog=RGDEMO;Persist Security Info=True;User ID=CONNRGDEMO;Password=Rgdemo@12345"
+      providerName="System.Data.SqlClient" />
+    <add name="RGDEMOConnectionString1" connectionString="Data Source=DTINAURPW00049\MSSQL2008;Initial Catalog=RGDEMO;Integrated Security=True"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+  <system.web>
+    <compilation debug="true" targetFramework="4.0"/>
+  </system.web>
+</configuration>

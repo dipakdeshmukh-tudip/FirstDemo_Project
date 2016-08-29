@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>Registration Form</title>
+		<script src="registration.js"></script>
+	</head>
+	<style>
+	</style>
+	<body background="E:\Traning Demo- Dipak/hm.jpg">
+		
+		<form name="RegForm" method="post">
+			<table id="RegTable" class="tb" align="center">
+				<tr>
+					<th id="FormTitle" colspan=2 ><center><h2>Registration Form</h2></center> </th>
+				</tr>
+				<tr>
+					<th> First Name:</th>
+					<td><input type="text"  id="txtFname" name="Fname" value="" /></td>
+				</tr>
+				<tr>
+					<th> Last Name:</th>
+					<td><input type="text" id="txtLname"name="Lname" value="" /></td>
+				</tr>
+				<tr>
+					<th>Address:</th>
+					<td><textarea name="Address" id="txtAddress" rows=5 columns=10></textarea></td>
+				</tr>
+				<tr>
+					<th>User Name:</th>
+					<td><input type="text" name="username" value="" /></td>
+				</tr>
+				<tr>
+					<th>Password:</th>
+					<td><input type="password" name="pass" value="" /></td>
+				</tr>
+				<tr>
+					<th>Confirm Password:</th>
+					<td><input type="password" name="confirmPass" value="" /></td>
+				</tr>
+				<tr>
+					<th> Date of Birth:</th>
+					<td><input type="text" name="DOB" value="" /></td>
+				</tr>
+				<tr>
+					<th> Gender:</th>
+					<td>
+					    <input type="radio" name="rbutton" value="Male" />Male &nbsp;&nbsp;&nbsp;
+					    <input type="radio" name="rbutton" value="FeMale" />FeMale
+					</td>
+				</tr>
+				<tr>
+					<th> Email ID:</th>
+					<td><input type="text" id="txtEmail" name="Email" value="" /></td>
+				</tr>
+				<tr>
+					<th>Mobile Number:</th>
+					<td><input type="text" name="MobileNo" value="" /></td>
+				</tr>
+				<tr>
+					<th>Education</th>
+					<td>
+						<select>
+							<option value="Select" selected>Select</option>
+							<option value="BCA"> BCA</option>
+							<option value="BSC">BSC </option>
+							<option value="BE">BE</option>
+							<option value="MCA">MCA </option>
+							<option value="ME"> ME</option>
+							<option value="MBA">MBA </option>
+							<option value="MTech."> MTech.</option>
+							<option value="BCom."> BCom.</option>
+							<option value="BTech.">BTech. </option>
+							<option value="MSC."> MSC</option>
+							<option value="10th"> 10th</option>
+							<option value="12th">12th </option>
+							<option value="Diploma"> Diploma</option>							
+						</select>
+					</td>						
+				</tr>
+				<tr>
+					<th>Uplode Resume Here</th>
+					<td><input type="file" name="Resume" value="" />
+				</tr>
+				<tr>
+					<td colspan="2">
+					<center>
+						<input type="submit" onclick="nameValid()" name="Submit" value="Register">
+						<input type="Reset" name="reset" value="Clear">
+					</center>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2 align="Right"><a href="E:\Traning Demo- Dipak\DemoWork\index.html">Click here to login user</a></td>
+					
+			</table>
+		</form>
+	</body>
+</html>
+	

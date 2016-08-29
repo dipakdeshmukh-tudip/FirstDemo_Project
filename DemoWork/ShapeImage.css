@@ -1,0 +1,173 @@
+#parent
+{
+	width:100%;
+	height:100%;
+	border-style: solid;	
+	position:relative;
+}
+.rectangle
+{
+	width:28%;
+	height:30%;
+	border-style: solid;
+	position:relative;
+}
+#rectangle1
+{
+	
+	float:left;	
+	margin-left:2%;
+	margin-top:2%;
+}
+#rectangle2
+{
+	
+	float:right;
+	margin-right:2%;
+	margin-top:2%;
+}
+#rectangle3
+{
+	
+	float:left;
+	margin-left:2%;
+	margin-bottom:1%;
+	margin-top:13%;
+	margin-right:29%;
+}
+#rectangle4
+{
+	
+	float:right;
+	margin-left:1%;
+	margin-bottom:2%;
+	margin-top:13%;
+	margin-right:2%;
+}
+
+#circleCenter
+{
+	width:13%;
+	height:25%;
+	border-style: solid;
+	border-radius:50%;
+	margin:17% 1% -15% 42%;	
+	position:relative;
+	
+}
+.square
+{
+	width:18%;
+	height:30%;
+	border-style: solid;
+	position:relative;
+}
+#square1
+{
+	margin:2% 20% 18% 6%;
+	float:left;
+}
+#square2
+{
+	margin:2% 6% 18% 20%;
+	float:right;
+	
+}
+#square3
+{
+	margin:18% 20% 2% 38%;
+}
+#square4
+{
+	margin:-6% 26% 6% 5%;
+}
+#square5
+{
+	margin:-22% 26% 10% 74%;
+}
+.rect
+{
+	width:25%;
+	height:30%;
+	border-style: solid;
+	position:relative;
+}
+#rect1
+{
+	margin:2% 20% 18% 6%;
+	float:left;
+}
+#rect2
+{
+	margin:2% 6% 30% 2%;
+	float:right;
+}	
+#rect3
+{
+	margin:-6% 26% 32% 6%;
+	float:left;
+}
+#rect4
+{
+	margin:-49% 40% 30% 65%;
+	float:left;
+}
+.incircle
+{
+	width:16%;
+	height:32%;
+	border-style: solid;
+	border-radius:50%;
+	position:relative;
+}
+#circle1
+{
+	margin:3% 20% 18% 6%;
+	float:left;
+}
+#circle2
+{
+	margin:2% 6% 30% 2%;
+	float:right;
+}	
+#circle3
+{
+	margin:-9% 26% 15% 6%;
+	float:left;
+}
+#circle4
+{
+	margin:28% 6% 10% 77%;
+	
+}
+#circle5
+{
+	margin:-40% 11% -21% 40%;
+}
+.oval
+{
+	width:20%;
+	height:23%;
+	border-style: solid;
+	border-radius:45%;
+}
+#oval1
+{
+	margin:3% 20% 18% 6%;
+	float:left;
+}
+#oval2
+{
+	margin:2% 6% 30% 2%;
+	float:right;
+}
+#oval3
+{
+	margin:-3% 26% 15% 6%;
+	float:left
+}
+#oval4
+{
+	margin:31% 6% 10% 73%;
+}
+

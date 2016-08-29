@@ -1,0 +1,149 @@
+Javascript Refernce
+
+JavaScript is a lightweight, client-side scripting programming language. It is used to interact with user and to make dynamic webpages.
+
+How to use Javascript in application?
+
+There are different ways of using javascript in an application.
+	We can write JavaScript code inside HTML page within script tag.
+		<Script>
+		//Your JavaScript code here
+		</script>
+	
+	We can create a javascript file with .js extension and include this file in HTML page.
+		<script type="text/javscript" src="path of js file"></script>
+		
+Document Object Model (DOM)
+
+Document Object Model (DOM) is a cross-platform and language-independent convention for representing and interacting with objects in HTML, XHTML, and XML documents. The nodes of every document are organized in a tree structure, called the DOM tree.
+	DOM Manipulation:
+		We can manipulate our DOM using JavaScript; but the better option would be using a Javascript library, jQuery. jQuery is a JavaScript library commonly used for DOM manipulation.
+		The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+		
+		We can manipulate any element from DOM using selectors (class, id, element and pseudo classes). We can do this with JavaScript as well as jQuery.
+		
+		Get Element:
+			Javascript way: 
+				getElementsByClassName('<class on the element to be fetched>');
+				getElementById('<id on the element to be fetched>');
+				
+			jQuery way:
+				$('.<classname>') //Fetching element using class selector
+				$('#<id>') //Fetching element using id selector
+				$('<element>') //Fetching element using element itself
+				
+Javascript Events
+
+onload: This event trigger when document loads.
+
+Example:
+	<body onload="myonload()"></div>
+	<script>
+	function myonload() {
+		alert("Page is loaded in DOM");
+	}
+	</script>
+
+
+onclick: This event will trigger on a mouse click.
+
+Example:
+	<div class="click" onclick="myClick()"></div>
+	<script>
+	function myClick() {
+		alert("I am clicked!");
+	}
+	</script>
+	
+ondblclick: This event will trigger on a mouse double-click.
+
+Example:
+	<div class="click" ondblclick="myClick()"></div>
+	<script>
+	function myClick() {
+		alert("I am double clicked!");
+	}
+	</script>
+	
+onfocus: This event will trigger when the window gets focused.
+
+Example:
+	<input type="text" class="test" onfocus="myFocus()"></div>
+	<script>
+	function myFocus() {
+		getElementsByClassName('test').style.border = " 5px solid #00ff00";
+	}
+	</script>
+	
+onblur: This event will trigger when the window gets out of focus. This is reverse of onfocus.
+
+Example:
+	<input type="text" class="test" onblur="myBlur()"></div>
+	<script>
+	function myBlur() {
+		getElementsByClassName('test').style.border = " 5px solid #000";
+	}
+	</script>
+	
+onkeypress: This event will trigger when key is pressed and released
+
+Example:
+	<div class="click" onkeypress="myKeyPress()"></div>
+	<script>
+	function myKeyPress() {
+		alert("The key is pressed and released");
+	}
+	</script>
+	
+onkeyup: This event will trigger when key is released
+
+Example:
+	<div class="click" onkeyup="myKeyUp()"></div>
+	<script>
+	function myKeyUp() {
+		alert("The key is released");
+	}
+	</script>
+	
+onkeydown: This event will trigger when key is pressed only
+
+Example:
+	<div class="click" onkeydown="myKeyDown()"></div>
+	<script>
+	function myKeyDown() {
+		alert("The key is pressed");
+	}
+	</script>
+	
+	
+Adding CSS through JavaScript
+
+	getElementsByClassName('<className>').style.property = "value";
+	getElementsByClassName('test').style.color = "#e2e2e2";
+	
+	Through jQuery
+	$('<classname>').css('color', '#e2e2e2');
+	
+	Adding multiple css through jQuery
+	$('<classname>').css({color: '#e2e2e2', border: '1px solid #000'});
+	
+
+JavaScript Chaining
+
+Chaining allow us to use multiple jQuery method one after another, on the same element.
+Example:
+$('.test').parent().sibling().closest().css('width', '30vmin');
+In this example, we have a class "test" through which we are accessing the element which is adjecent to the parent element of current one, to apply css rules on it.
+
+This is how we achieve chaining.
+
+Note: To apply chaining, make sure which element you are targetting on or have a clear idea of DOM structure.
+	
+	
+Best Practices
+
+Use external file to write JavaScript code. Avoid writing it inside HTML page.
+
+Use "console.log()" to debug the output rather than "alert()" as "alert()" do NOT support object values.
+
+Try to use "dev tool" for debugging your script. You can use multiple checkpoints on your code to debug the output. This will reduce your time consumption in switching between your code and browser.   

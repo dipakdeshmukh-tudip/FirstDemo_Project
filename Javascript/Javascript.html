@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>Demo Javascript</title>	
+		
+	</head>
+	<body>
+		
+		<!-- <p id="demo"></p>
+		/* create a simple javascript function */
+		<script>
+			document.write ("multipication is");
+			function myFunction(a, b) {
+					return a * b;
+				}
+				//alert("multipication is");
+				
+			document.getElementById("demo").innerHTML = myFunction(4, 3);
+		</script>
+		
+		<script>
+			
+			function myFunction(a, b) {
+					return a * b;
+				}
+				//alert("multipication is");
+				
+			document.write ("multipication is"+ myFunction(4, 3));
+		</script>
+		
+		//Take input from texbox and pass value to function
+		<script>
+			var a=document.getElementById("TextBox1>").value;
+			var b=document.getElementById("TextBox2").value;
+			function myFunction() {
+					return a * b;
+				}
+				//alert("multipication is");
+		</script>
+		<form>
+		<table>
+				<tr>
+					<th>Number First:</th><td><input type="text" name="TextBox1" /></td>
+				</tr>
+				<tr>
+					<th>Number Second:</th><td><input type="text" name="TextBox2" /></td>
+				</tr>
+				<tr>
+					<th colspan="2"><input type="button" name="btn1" value="multiplication" onclick=" return myFunction()" /></th>
+				</tr>
+		</table>
+		</form>
+		
+		//Call function on button
+		<script>
+			
+			function myFunction(a, b) {
+					//return a * b;
+					document.write ("multipication is "+ a * b);
+				}
+				//alert("multipication is");
+				
+
+		</script>
+		<form>
+			<input type="button" name="btn1" value="multiplication" onclick="myFunction(2,5)" />
+		</form>
+		
+		
+		<script>
+			console.log(5 * 12);
+		</script>
+		-->
+		
+		
+	<form>
+		<table>
+		<tr>
+		 <th>Number First:</th><td><input type="text" id="TextBox1" /></td>
+		</tr>
+		<tr>
+		 <th>Number Second:</th><td><input type="text" id="TextBox2" /></td>
+		</tr>
+		<tr> <th>Result:</th><td><input type="text" id="res"></td>
+		</tr>
+		<tr>
+		 <th colspan="2">
+			<input type="button" name="btnMul" value="multiplication" onclick="myFunctionMultipication()" />
+			<input type="button" name="btnDiv" value="Division" onclick="myFunctiondivision()" />
+		 <th>
+		</tr>
+	   </table>
+	</form>		
+</body>
+</html>

@@ -1,0 +1,56 @@
+			$heighthead:100%;
+			$widthhead:10%;
+			$myval:2%;
+			.fright {float: right;}
+			.fleft {float: left;}
+			@mixin widthdiv($widthval)
+			{
+				width:$widthval;
+			}
+			#Header
+			{
+				height:$widthhead;
+				width: $heighthead;
+				text-align:center;
+			}
+			
+			#menu
+			{
+				height:$myval * 2;
+				@include widthdiv(100%);				
+			}
+			
+			#LeftContent
+			{
+				height:78%; width:$myval * 40;@extend .fleft;
+			}
+			#RightContent
+			{
+				height:78%; width:19%;@extend .fright;
+			}
+			#LC1
+			{
+				width:50%;@extend .fright;
+			}
+			#LC2
+			{
+				width:20%;@extend .fleft;
+			}
+			li{
+				Display:inline;
+			}
+			#menuList
+			{
+				text-align:center;
+			}
+			body
+			{
+				background-repeat:no-repeat;background-image:url("E:\Traning Demo- Dipak/hm.jpg");
+			}
+			#TbLg
+			{
+				align:center;
+			}
+			
+			
+			

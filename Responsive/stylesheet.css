@@ -1,0 +1,154 @@
+			#container
+			{
+				min-height:100%;
+				max-width:100%;
+			}
+			#Header
+			{
+				min-height:10px;
+				max-width:100%;
+				text-align:center;
+				padding:1% 1% 1% 1%; 
+				position:relative;
+			}
+			#menu
+			{
+				min-height:4%;
+				max-width:100%;	
+				position:relative;}
+			}
+			
+			#LeftContent
+			{
+				min-height:78%; 
+				max-width:80%;
+				float:left;
+				position:relative;
+			}
+			#RightContent
+			{
+				min-height:78%; 
+				max-width:19%;
+				float:right;
+				position:relative;
+			}
+			#LC1
+			{
+				max-width:50%;
+				float:right;
+				position:relative;
+			}
+			#LC2
+			{
+				max-width:20%;
+				float:left;
+				position:relative;
+			}
+			li{
+				Display:inline;
+				position:relative;
+			}
+			#menuList
+			{
+				text-align:center;
+				position:relative;
+				
+			body
+			{
+				background-repeat:no-repeat;background-image:url("E:\Traning Demo- Dipak/hm.jpg");
+				position:relative;
+			}
+			#TbLg
+			{
+				align:center;
+				position:relative;
+			}
+			li:hover {
+				background-color: yellow;
+				position:relative;
+			}
+			#footer
+			{
+				max-width:100%;
+				min-height:5%;
+			}
+		@media only screen and (max-width: 500px)
+		{
+			#container
+			{
+				height:100%;
+				width:100%;
+			}
+			#Header
+			{
+				height:10%;
+				width:100%;
+				text-align:center;
+				padding:1% 1% 1% 1%; 
+				position:relative;
+			}
+			#menu
+			{
+				height:4%;
+				width:100%;	
+				position:relative;}
+			}
+			
+			#LeftContent
+			{
+				height:78%; 
+				width:80%;
+				float:left;
+				position:relative;
+			}
+			#RightContent
+			{
+				min-height:78%; 
+				max-width:19%;
+				float:right;
+				position:relative;
+			}
+			#LC1
+			{
+				width:50%;
+				float:right;
+				position:relative;
+			}
+			#LC2
+			{
+				max-width:20%;
+				float:left;
+				position:relative;
+			}
+			li{
+				Display:block;
+				position:relative;
+				float:left;
+			}
+			#menuList
+			{
+				text-align:center;
+				position:relative;
+			}	
+			body
+			{
+				background-repeat:no-repeat;
+				background-image:url("E:\Traning Demo- Dipak/hm.jpg");
+				position:relative;
+			}
+			#TbLg
+			{
+				align:center;
+				position:relative;
+			}
+			
+			#footer
+			{
+				width:100%;
+				height:5%;
+			}
+		}
+    
+			
+			
+			
