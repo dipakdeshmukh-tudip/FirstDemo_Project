@@ -69,7 +69,7 @@
 	   function myFunctiondivision() 
 	   {
 		   var num5 = 7;
-			
+			var num6=document.getElementById("TextBox6").value;
 			var num1=document.getElementById("TextBox1").value;
 			var num2=document.getElementById("TextBox2").value;
 			//document.write(a);
